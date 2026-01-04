@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('stats-grid').innerHTML = statsHtml;
 
             // Update Bio if available
-            if(data.bio) {
+            if (data.bio) {
                 document.getElementById('bio-text').textContent = data.bio;
             } else {
                 document.getElementById('bio-text').textContent = "Full Stack Developer mainly working with Node.js, Python and Go.";
@@ -66,10 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function createProjectCard(repo) {
         const div = document.createElement('div');
         div.className = 'project-card';
-        
+
+        // Make the whole card clickable
+        div.onclick = (e) => {
+            // Prevent navigation if clicking on a specific link/icon inside the card
+            if (!e.target.closest('a')) {
+                window.open(repo.html_url, '_blank');
+            }
+        };
+
         const description = repo.description ? repo.description : 'No description available.';
         const language = repo.language ? `<span>${repo.language}</span>` : '';
-        
+
         div.innerHTML = `
             <div class="project-header">
                 <i class="far fa-folder folder-icon"></i>

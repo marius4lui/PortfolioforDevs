@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +9,51 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="gradient-bg"></div>
-    
+    <div class="noise-bg"></div>
+    <div class="grid-bg"></div>
+
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-                <span>Marius4lui</span>
+                <span class="logo-text">M4L.</span>
             </a>
             <nav class="nav">
-                <a href="https://github.com/Marius4lui" target="_blank" class="nav-link special-link"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#stats" class="nav-link">STATS</a>
+                <a href="#projects" class="nav-link">WORK</a>
+                <a href="https://github.com/Marius4lui" target="_blank" class="nav-link special-link">GITHUB</a>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="profile-badge">
-                        <span class="status-dot"></span> Available for hire
-                    </div>
-                    <h1 class="hero-title">Building the future,<br><span class="gradient-text">one line at a time.</span></h1>
-                    <p class="hero-description" id="bio-text">Loading bio...</p>
-                    <div class="hero-actions">
-                        <a href="https://github.com/Marius4lui" target="_blank" class="btn btn-primary">View GitHub Profile</a>
-                        <a href="#projects" class="btn btn-secondary">My Projects</a>
-                    </div>
+            <div class="container hero-container-inner">
+                <div class="profile-wrapper">
+                    <img id="avatar-img" src="https://github.com/Marius4lui.png" alt="Profile" class="avatar">
+                    <div class="status-indicator"></div>
+                </div>
+
+                <p class="intro-label">HELLO, I AM A DEVELOPER</p>
+
+                <h1 class="huge-title">
+                    MARIUS
+                    <span class="outline-text">4LUI</span>
+                </h1>
+
+                <div class="accent-line"></div>
+
+                <p class="hero-description" id="bio-text">Loading bio...</p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">VIEW PROJECTS</a>
+                    <a href="https://github.com/Marius4lui" target="_blank" class="btn btn-outline">CONTACT ME</a>
                 </div>
             </div>
         </section>
@@ -60,10 +73,10 @@
                     <p>A collection of my latest work from GitHub</p>
                 </div>
                 <div class="projects-grid" id="projects-grid">
-                   <div class="loading-state">
-                       <div class="spinner"></div>
-                       <p>Loading repositories...</p>
-                   </div>
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading repositories...</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,4 +93,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
