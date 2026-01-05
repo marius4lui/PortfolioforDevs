@@ -1,0 +1,23 @@
+{
+    "githubUsername": "marius4lui",
+    "logoText": "M4L.",
+    "hero": {
+        "subtitle": "HELLO, I AM A DEVELOPER",
+        "title": "MARIUS",
+        "titleSuffix": "4LUI"
+    },
+    "ventures": [
+        {
+            "title": "KMUC Digital",
+            "description": "Professional Websites & Online-Shops.",
+            "tag": "AGENCY",
+            "url": "https://kmuc.online"
+        }
+    ],
+    "theme": {
+        "accentColor": "#D4FF00",
+        "textColor": "#ffffff",
+        "secondaryColor": "#aaaaaa",
+        "backgroundColor": "#050505"
+    }
+}

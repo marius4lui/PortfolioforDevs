@@ -3,11 +3,11 @@
     --text-primary: #ffffff;
     --text-secondary: #aaaaaa;
     --accent-color: #D4FF00;
-    /* Lime Green/Yellow */
     --card-bg: #111111;
     --border-color: #222222;
-    --font-sans: 'Inter', sans-serif;
-    --font-display: 'Syne', sans-serif;
+    /* Fonts will be set via Next.js Font Variables in layout */
+    --font-sans: var(--font-inter), sans-serif;
+    --font-display: var(--font-syne), sans-serif;
 }
 
 * {
@@ -111,7 +111,6 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 80px;
-    /* Offset for header */
     text-align: center;
 }
 
@@ -214,7 +213,6 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 4px;
-    /* Slight round, mostly blocky */
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -286,7 +284,6 @@ body {
     background: var(--accent-color);
     padding: 4px 12px;
     border-radius: 4px;
-    /* Industrial tag look */
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -400,7 +397,6 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     aspect-ratio: 4/3;
-    /* Make them boxy */
     padding: 32px;
     position: relative;
     overflow: hidden;
@@ -517,6 +513,256 @@ body {
 
     .nav {
         display: none;
-        /* simple hide for now */
     }
+}
+
+/* CLEAN WIZARD STYLES */
+.wizard-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 5, 5, 0.85);
+    /* Darker, simpler backdrop */
+    backdrop-filter: blur(8px);
+    padding: 16px;
+}
+
+.wizard-box-clean {
+    max-width: 600px;
+    width: 100%;
+    background-color: #0F0F0F;
+    border: 1px solid #1F1F1F;
+    border-radius: 12px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.wizard-clean-header {
+    background: #000;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.logo-badge {
+    color: #fff;
+    font-weight: 800;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+}
+
+.progress-pills {
+    display: flex;
+    gap: 6px;
+}
+
+.pill {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: #222;
+    transition: background 0.3s;
+}
+
+.pill.active {
+    background: var(--accent-color);
+}
+
+.step-container {
+    padding: 32px;
+}
+
+.step-header-wrapper {
+    margin-bottom: 32px;
+}
+
+.step-heading {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.step-desc {
+    color: #888;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.wizard-input {
+    width: 100%;
+    background: #000;
+    border: 1px solid #222;
+    padding: 14px 16px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.wizard-input:focus {
+    border-color: #fff;
+    background: #050505;
+}
+
+.wizard-input.main-input {
+    font-size: 1.25rem;
+    padding: 20px;
+}
+
+.wizard-footer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wizard-footer.split {
+    justify-content: space-between;
+}
+
+.wizard-btn {
+    padding: 0 32px;
+    height: 48px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wizard-btn.primary {
+    background: #fff;
+    color: #000;
+    border: none;
+}
+
+.wizard-btn.primary:hover {
+    background: var(--accent-color);
+}
+
+.wizard-btn.secondary {
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.wizard-btn.secondary:hover {
+    border-color: #fff;
+}
+
+.wizard-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Ventures Clean */
+.ventures-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.ventures-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.ventures-list::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}
+
+.venture-row {
+    background: #111;
+    border: 1px solid #1c1c1c;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.venture-row-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.venture-index {
+    background: #000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: #ff5555;
+}
+
+.venture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.wizard-input.full-width {
+    grid-column: 1 / -1;
+}
+
+.add-btn-clean {
+    width: 100%;
+    padding: 16px;
+    border: 1px dashed #333;
+    background: transparent;
+    color: #666;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.add-btn-clean:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: rgba(212, 255, 0, 0.03);
+}
+
+.error-banner {
+    background: #3c1414;
+    color: #ffaaaa;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #5a1e1e;
 }
