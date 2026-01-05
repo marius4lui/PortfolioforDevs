@@ -1,4 +1,5 @@
 {
+    "setupDismissed": false,
     "githubUsername": "wdhdev",
     "logoText": "WDH.",
     "hero": {
@@ -8,22 +9,10 @@
     },
     "ventures": [
         {
-            "title": "KMUC Digital",
-            "description": "Professional Websites & Online-Shops. Transforming businesses with tailored digital solutions.",
+            "title": "My Agency",
+            "description": "High quality websites",
             "tag": "AGENCY",
-            "url": "https://kmuc.online"
-        },
-        {
-            "title": "Vetra UI",
-            "description": "Modern Landing Page Template & UI Library. Built with Tailwind CSS and React.",
-            "tag": "OPEN SOURCE",
-            "url": "https://vetra.kmuc.online"
-        },
-        {
-            "title": "Toolbox",
-            "description": "Modern Desktop Utilities. Powerful image compression and workflow tools.",
-            "tag": "SOFTWARE",
-            "url": "https://qhrd.online"
+            "url": "https://example.com"
         }
     ],
     "theme": {

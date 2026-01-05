@@ -23,6 +23,10 @@ const ArrowRightIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
 );
 
+const XIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+);
+
 export default function SetupWizard() {
     const [step, setStep] = useState(1);
     const [username, setUsername] = useState("");
@@ -47,6 +51,20 @@ export default function SetupWizard() {
 
     const removeVenture = (index: number) => {
         setVentures(ventures.filter((_, i) => i !== index));
+    };
+
+    const handleDismiss = async () => {
+        try {
+            const res = await fetch('/api/setup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dismiss: true })
+            });
+            if (!res.ok) throw new Error('Failed to dismiss');
+            window.location.reload();
+        } catch (err) {
+            console.error("Dismiss failed", err);
+        }
     };
 
     const handleSubmit = async () => {
@@ -175,9 +193,14 @@ export default function SetupWizard() {
             >
                 <div className="wizard-clean-header">
                     <div className="logo-badge">M4L</div>
-                    <div className="progress-pills">
-                        <div className={`pill ${step === 1 ? 'active' : ''}`}></div>
-                        <div className={`pill ${step === 2 ? 'active' : ''}`}></div>
+                    <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+                        <div className="progress-pills">
+                            <div className={`pill ${step === 1 ? 'active' : ''}`}></div>
+                            <div className={`pill ${step === 2 ? 'active' : ''}`}></div>
+                        </div>
+                        <button onClick={handleDismiss} className="icon-btn" title="Don't show again">
+                            <XIcon />
+                        </button>
                     </div>
                 </div>
 

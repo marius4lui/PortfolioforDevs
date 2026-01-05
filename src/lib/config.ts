@@ -8,6 +8,7 @@ export interface Venture {
 }
 
 export interface Config {
+    setupDismissed?: boolean;
     githubUsername: string;
     logoText: string;
     hero: {

@@ -62,18 +62,31 @@ export default function Home() {
                     // Update Display Name logic
                     const nameToUse = profileData.name || username;
                     if (nameToUse) {
-                        const parts = nameToUse.split(" ");
-                        // If more than one word, split first word and rest
-                        if (parts.length > 1) {
+                        // 1. Try splitting by space
+                        if (nameToUse.includes(' ')) {
+                            const parts = nameToUse.split(" ");
                             setDisplayName({
                                 main: parts[0],
                                 suffix: parts.slice(1).join(" ")
                             });
-                        } else {
-                            // Single word
+                        }
+                        // 2. Try splitting by number (e.g. marius4lui -> marius 4lui)
+                        else if (/\d/.test(nameToUse)) {
+                            const match = nameToUse.match(/^([^\d]+)(\d.*)$/);
+                            if (match) {
+                                setDisplayName({
+                                    main: match[1],
+                                    suffix: match[2]
+                                });
+                            } else {
+                                setDisplayName({ main: nameToUse, suffix: "" });
+                            }
+                        }
+                        // 3. Fallback: Full name
+                        else {
                             setDisplayName({
                                 main: nameToUse,
-                                suffix: "" // No suffix if single name
+                                suffix: ""
                             });
                         }
                     }
@@ -308,8 +321,8 @@ export default function Home() {
                 </div>
             </footer>
 
-            {/* Setup Wizard only on default username */}
-            {config.githubUsername === 'marius4lui' && (
+            {/* Setup Wizard only on default username and if not dismissed */}
+            {config.githubUsername === 'marius4lui' && !config.setupDismissed && (
                 <SetupWizard />
             )}
         </>
