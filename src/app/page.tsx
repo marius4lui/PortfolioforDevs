@@ -321,8 +321,8 @@ export default function Home() {
                 </div>
             </footer>
 
-            {/* Setup Wizard only on default username and if not dismissed */}
-            {config.githubUsername === 'marius4lui' && !config.setupDismissed && (
+            {/* Setup Wizard only on default username, if not dismissed, AND IN DEV MODE */}
+            {process.env.NODE_ENV === 'development' && config.githubUsername === 'marius4lui' && !config.setupDismissed && (
                 <SetupWizard />
             )}
         </>

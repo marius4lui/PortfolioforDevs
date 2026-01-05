@@ -1,18 +1,30 @@
 {
     "setupDismissed": false,
     "githubUsername": "marius4lui",
-    "logoText": "WDH.",
+    "logoText": "M4L.",
     "hero": {
         "subtitle": "FULL STACK DEVELOPER",
-        "title": "WDH",
+        "title": "M4L",
         "titleSuffix": "DEV"
     },
     "ventures": [
         {
-            "title": "My Agency",
-            "description": "High quality websites",
+            "title": "KMUC Digital",
+            "description": "Professional Websites & Online-Shops. Transforming businesses with tailored digital solutions.",
             "tag": "AGENCY",
-            "url": "https://example.com"
+            "url": "https://kmuc.online"
+        },
+        {
+            "title": "Vetra UI",
+            "description": "Modern Landing Page Template & UI Library. Built with Tailwind CSS and React.",
+            "tag": "OPEN SOURCE",
+            "url": "https://vetra.kmuc.online"
+        },
+        {
+            "title": "Toolbox",
+            "description": "Modern Desktop Utilities. Powerful image compression and workflow tools.",
+            "tag": "SOFTWARE",
+            "url": "https://qhrd.online"
         }
     ],
     "theme": {

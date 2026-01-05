@@ -84,7 +84,7 @@ export default function SetupWizard() {
             window.location.reload();
 
         } catch (err) {
-            setError('Something went wrong. Please edit src/lib/config.ts manually.');
+            setError('Something went wrong. Please edit data.json manually.');
             setLoading(false);
         }
     };
