@@ -108,7 +108,6 @@ All other settings (logo, hero, ventures, theme) are configured via the **Setup 
 
 | Command | Description |
 | :--- | :--- |
-| `pnpm build` | Standard build (uses current `next.config.mjs` setting) |
 | `pnpm build:static` | Build as **static export** (`output: 'export'`) – generates static HTML files |
 | `pnpm build:dynamic` | Build as **standalone** (`output: 'standalone'`) – for Docker/SSR deployment |
 
