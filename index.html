@@ -22,12 +22,14 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-text">M4L.</span>
+                <span class="logo-text" id="logo-text">M4L.</span>
             </a>
             <nav class="nav">
                 <a href="#stats" class="nav-link">STATS</a>
-                <a href="#projects" class="nav-link">WORK</a>
-                <a href="https://github.com/Marius4lui" target="_blank" class="nav-link special-link">GITHUB</a>
+                <a href="#ventures" class="nav-link" id="nav-ventures">WORK</a>
+                <a href="#projects" class="nav-link">REPOS</a>
+                <a href="https://github.com/Marius4lui" target="_blank" class="nav-link special-link"
+                    id="nav-github">GITHUB</a>
             </nav>
         </div>
     </header>
@@ -40,11 +42,11 @@
                     <div class="status-indicator"></div>
                 </div>
 
-                <p class="intro-label">HELLO, I AM A DEVELOPER</p>
+                <p class="intro-label" id="hero-subtitle">HELLO, I AM A DEVELOPER</p>
 
                 <h1 class="huge-title">
-                    MARIUS
-                    <span class="outline-text">4LUI</span>
+                    <span id="hero-title">MARIUS</span>
+                    <span class="outline-text" id="hero-title-suffix">4LUI</span>
                 </h1>
 
                 <div class="accent-line"></div>
@@ -53,7 +55,8 @@
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">VIEW PROJECTS</a>
-                    <a href="https://github.com/Marius4lui" target="_blank" class="btn btn-outline">CONTACT ME</a>
+                    <a href="https://github.com/Marius4lui" target="_blank" class="btn btn-outline"
+                        id="contact-btn">CONTACT ME</a>
                 </div>
             </div>
         </section>
@@ -65,7 +68,7 @@
                     <p>TOOLS, AGENCIES & LIBRARIES I'VE BUILT</p>
                 </div>
 
-                <div class="ventures-grid">
+                <div class="ventures-grid" id="ventures-grid">
                     <a href="https://kmuc.online" target="_blank" class="venture-card">
                         <div class="venture-content">
                             <span class="venture-tag">AGENCY</span>
@@ -132,6 +135,7 @@
         </div>
     </footer>
 
+    <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
 
