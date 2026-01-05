@@ -43,16 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchRepos() {
         try {
-            const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+            // Fetching more to filter/sort if needed, but 'pushed' is good proxy for "most active"
+            const response = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=3`);
             if (!response.ok) throw new Error('Repos not found');
             const data = await response.json();
 
             const projectsContainer = document.getElementById('projects-grid');
             projectsContainer.innerHTML = ''; // Clear loading state
 
-            // Sort by stars just in case, or keep 'updated' from query
             data.forEach(repo => {
-                // Skip forks if you want, or just show everything
                 const card = createProjectCard(repo);
                 projectsContainer.appendChild(card);
             });
