@@ -1,0 +1,9 @@
+node_modules
+.next
+legacy_html
+.git
+.env*
+Dockerfile
+Dockerfile.dev
+docker-compose*
+README.md
