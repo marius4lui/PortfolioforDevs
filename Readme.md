@@ -88,6 +88,36 @@ When you first launch the app, you will see a **Setup Overlay**.
 
 ---
 
+## 🖥️ CLI & Build Commands
+
+### CLI Configuration
+
+You can configure essential settings via the command line:
+
+```bash
+pnpm cli
+```
+
+This will prompt you for:
+- **Static Output**: Enable/disable static export mode.
+- **GitHub Username**: Your GitHub username for fetching profile data.
+
+All other settings (logo, hero, ventures, theme) are configured via the **Setup Wizard** or directly in `data.json`.
+
+### Build Commands
+
+| Command | Description |
+| :--- | :--- |
+| `pnpm build` | Standard build (uses current `next.config.mjs` setting) |
+| `pnpm build:static` | Build as **static export** (`output: 'export'`) – generates static HTML files |
+| `pnpm build:dynamic` | Build as **standalone** (`output: 'standalone'`) – for Docker/SSR deployment |
+
+**When to use which?**
+- **Static**: Perfect for GitHub Pages, Vercel (static), Netlify, or any static hosting.
+- **Dynamic**: Required for Docker deployments or when using API routes that need server-side functionality.
+
+---
+
 ## ⚙️ Configuration (`data.json`)
 
 All site data is stored in `data.json` in the root directory. You can edit this file manually at any time.

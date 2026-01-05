@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:static": "node scripts/set-build-mode.mjs static && next build",
+    "build:dynamic": "node scripts/set-build-mode.mjs dynamic && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cli": "node scripts/cli.mjs"
   },
   "dependencies": {
     "next": "15.1.0",
