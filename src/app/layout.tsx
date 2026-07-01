@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     title: `${config.githubUsername} | Developer Portfolio`,
     description: 'Portfolio of Marius4lui - Full Stack Developer',
     icons: {
-        icon: `https://github.com/${config.githubUsername}.png`,
-        shortcut: `https://github.com/${config.githubUsername}.png`,
-        apple: `https://github.com/${config.githubUsername}.png`,
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/logo.png',
     }
 };
 
