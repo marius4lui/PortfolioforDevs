@@ -153,8 +153,8 @@ export default function Home() {
                     <div className="container hero-container-inner">
                         <div className="profile-wrapper">
                             <img
-                                src="/logo.png"
-                                alt="Marius Lui"
+                                src={`https://github.com/${config.githubUsername}.png`}
+                                alt="Profile"
                                 className="avatar"
                             />
                             <div className="status-indicator"></div>
